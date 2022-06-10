@@ -1,5 +1,6 @@
 package com.example.jettipapp.components
 
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -28,9 +29,10 @@ fun InputField(modifier: Modifier= Modifier,
                keyboardType: KeyboardType = KeyboardType.Number,
                imeAction: ImeAction = ImeAction.Next,
                action: KeyboardActions = KeyboardActions.Default
-               ){
+               )
+{
                     OutlinedTextField(
-                        modifier = modifier.padding(bottom = 10.dp, start = 10.dp, end = 10.dp),
+                        modifier = modifier.padding(bottom = 10.dp, start = 10.dp, end = 10.dp).fillMaxWidth(),
                         value = valueState.value, onValueChange = {
                         valueState.value = it
                     },
@@ -48,4 +50,4 @@ fun InputField(modifier: Modifier= Modifier,
                         keyboardActions = action
 
                     )
-                }
+}
